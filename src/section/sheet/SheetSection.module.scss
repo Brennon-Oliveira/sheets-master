@@ -1,0 +1,17 @@
+.sheet_section {
+	display: flex;
+	flex-direction: column;
+
+	> div {
+		// flex: 1;
+		display: flex;
+		flex-direction: row;
+
+		> div {
+			flex: 1;
+			border: 1px solid black;
+			resize: both;
+			overflow: auto;
+		}
+	}
+}
