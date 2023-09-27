@@ -8,6 +8,7 @@ import ToolBar from './components/tools-bar';
 function App() {
 	return (
 		<div className="App">
+			<button onClick={() => process.exit()}>aaa</button>
 			<ToolBar.Root>
 				<p>teste</p>
 				<ToolBar.Divisor />
