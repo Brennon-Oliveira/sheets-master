@@ -5,8 +5,6 @@ import ToolBar from 'src/components/tools-bar';
 export default function ToolBarSection() {
 	return (
 		<ToolBar.Root>
-			<p>teste</p>
-			<ToolBar.Divisor />
 			<ToolBar.Section>
 				<ToolBar.Button>
 					<BsArrowReturnLeft />
