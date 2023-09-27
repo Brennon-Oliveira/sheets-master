@@ -1,18 +1,16 @@
 
-import electron from 'electron';
+import {app, BrowserWindow, ipcMain} from 'electron';
 
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+let mainWindow: BrowserWindow;
 
-let mainWindow: electron.BrowserWindow;
 
-const ipcMain = electron.ipcMain
 
 ipcMain.on('teste', (event, arg) => {
     console.log(arg)
 })
 
 app.on("ready", () => {
+    console.log("app ready");
     mainWindow = new BrowserWindow({
         width: 2048,
         height: 1080,

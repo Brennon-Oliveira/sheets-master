@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
+import "path-browserify";
+const { ipcRenderer } = window.require('electron');
 
-const electron = window.require("electron");
-const ipcRenderer = electron.ipcRenderer;
-
+ipcRenderer.on("teste", (event:any, arg:any) => {
+  console.log("--------------------")
+  console.log(arg);
+  console.log("--------------------")
+});
 function App() {
 
   function teste(){
-    console.log(ipcRenderer)
+    console.log()
     console.log("teste");
     ipcRenderer.send('teste', {teste: "aaaa"});
   }

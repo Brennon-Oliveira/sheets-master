@@ -15,8 +15,9 @@ const tryConnection = ()=>client.connect({port}, () => {
     if(!startedElectron){
         console.log('starting electron');
         startedElectron = true;
-        const exec = require("child_process").exec;
-        exec('bun run electron');
+        var spawn = require('child_process').spawn
+        const electronProcess = spawn('bun', ['run', 'electron']);
+        electronProcess.stdout.pipe(process.stdout)
     }
 });
 
