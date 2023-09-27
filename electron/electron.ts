@@ -6,10 +6,6 @@ const url = process.env.ELECTRON_APPLICATION_URL || `http://localhost:3000`;
 const portMatch = url.match(/:([0-9]+)/);
 const port = portMatch ? +portMatch[1] : 3000;
 
-ipcMain.on('teste', (event, arg) => {
-	console.log(arg);
-});
-
 app.on('ready', () => {
 	console.log('app ready');
 	mainWindow = new BrowserWindow({
@@ -22,7 +18,7 @@ app.on('ready', () => {
 	});
 
 	mainWindow.loadURL(url);
-	mainWindow.webContents.openDevTools();
+	mainWindow.loadFile(__dirname + '/../assets/loading.html');
 
 	mainWindow.on('closed', async () => {
 		console.log('closed');
