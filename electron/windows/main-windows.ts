@@ -32,15 +32,12 @@ export class MainWindow extends Window {
 	}
 
 	private listeners(): void {
-		console.log('Listeners');
 		Intern.getInstance().on('open-inspector', () => {
-			console.log('Open inspector');
 			this.openInspector();
 		});
 	}
 
 	openInspector() {
-		console.log(this.window);
 		this.window.webContents.openDevTools();
 	}
 }
