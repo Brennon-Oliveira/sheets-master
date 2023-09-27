@@ -18,7 +18,6 @@ app.on('ready', () => {
 	});
 
 	mainWindow.loadURL(url);
-	mainWindow.loadFile(__dirname + '/../assets/loading.html');
 
 	mainWindow.on('closed', async () => {
 		console.log('closed');
