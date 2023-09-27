@@ -1,13 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+const electron = window.require("electron");
+const ipcRenderer = electron.ipcRenderer;
+
 function App() {
+
+  function teste(){
+    console.log(ipcRenderer)
+    console.log("teste");
+    ipcRenderer.send('teste', {teste: "aaaa"});
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -17,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={teste}>teste</button>
       </header>
     </div>
   );
