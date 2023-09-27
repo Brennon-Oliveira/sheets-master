@@ -1,0 +1,27 @@
+{
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"html.format.wrapAttributes": "force-expand-multiline",
+	"editor.rulers": [80],
+	"editor.tabSize": 2,
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.insertFinalNewline": true,
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"server": "infinite-finance-dev.cuyoxpoyvqg2.us-east-1.rds.amazonaws.com",
+			"port": 5432,
+			"driver": "PostgreSQL",
+			"name": "Infinite Finance Dev",
+			"group": "Infinite Finance",
+			"database": "infinite-finance-dev",
+			"username": "postgresql",
+			"password": "aFksie31oLd_3"
+		}
+	]
+}
