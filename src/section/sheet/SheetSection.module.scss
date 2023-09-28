@@ -1,17 +1,48 @@
 .sheet_section {
 	display: flex;
 	flex-direction: column;
+	overflow: auto;
 
-	> div {
-		// flex: 1;
+	.row {
+		width: fit-content;
 		display: flex;
 		flex-direction: row;
 
-		> div {
-			flex: 1;
-			border: 1px solid black;
-			resize: both;
-			overflow: auto;
+		.header_cell {
+			border: 1px solid rgb(114, 119, 119);
+			width: 120px;
+			height: 28px;
+			position: relative;
+			z-index: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.column_header {
+			@extend .header_cell;
+		}
+
+		.row_header {
+			@extend .header_cell;
+		}
+
+		.sheet_cell {
+			border: 1px solid rgb(217, 213, 238);
+			width: 120px;
+			height: 28px;
+			position: relative;
+			z-index: 1;
+			cursor: cell;
+			font-size: 14px;
+
+			&.sheet_cell_focus {
+				outline: 1px solid rgb(92, 66, 238);
+				border: 1px solid rgb(92, 66, 238);
+				z-index: 2;
+				// resize: both;
+				// overflow: auto;
+			}
 		}
 	}
 }
